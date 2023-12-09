@@ -7,7 +7,6 @@ interfaz criptográfica de alto nivel Fernet.
 ## Integrantes del equipo:
 - Alatorre Méndez Sofía Guadalupe
 - Cornejo de la Mora Iñaki
-- Moreno Castro Fernanda
 - Orta Castillo Maria de los Angeles
 
 ## Pre-requisitos para compilar
@@ -19,5 +18,7 @@ es con el gestor de paquetes pip:
 ```bash
 pip install cryptography
 ```
+## Compilación del proyecto
 
+## Compilación de tests
 

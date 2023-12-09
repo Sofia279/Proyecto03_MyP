@@ -9,6 +9,15 @@ class Polynomial:
     def __init__(self, pair_file: str) -> None:
         self.pair_file = pair_file
 
+    def encrypt(self, clear_file: str, shares: int, minimum: int,
+                password: str) -> None:
+        self.write_pairs(shares, minimum, password)
+        self.encrypt_file(clear_file, password)
+
+    def decrypt(self, encrypted_file: str) -> None:
+        password = self.get_password().decode('utf-8')
+        self.decrypt_file(encrypted_file, password)
+
     def write_pairs(self, shares: int, minimum: int, password: str) -> None:
         assert shares > 2, "El número total de datos debe ser mayor a dos."
         assert shares >= minimum, "El mínimo de datos no puede ser mayor" \
